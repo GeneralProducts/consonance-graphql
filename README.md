@@ -2,7 +2,7 @@
 
 Welcome to the Consonance GraphQL API.
 
-This is where we help you use the felxibility and efficiency of our GraphQL interface to get structured data from your single source of bibliographic truth.
+This is where we help you use the flexibility and efficiency of our GraphQL interface to get structured data from your single source of bibliographic truth.
 
 ## Why GraphQL?
 
@@ -10,11 +10,11 @@ Bibliographic metadata has a complex structure, in which works, products, series
 
 This is difficult to capture in fixed data formats such as ONIX, which (quite appropriately) copes with this complexity by presenting product-oriented data, and also requires that a great deal of metadata is included which might not be necessary for every purpose.
 
-GraphQL addresses these issues by treating the data as "types", such as `Work`, `Contact`, `Product`, `Prize`, and `Series`, which have "fields" such as `title`, `id`, and `name`, and which are connected together so that for an individual `Work` you can ask for its `products`, or its `contributions`. For each of a work's products you can request the ISBN, title, product form, and perhaps it's USD library prices.
+GraphQL addresses these issues by treating the data as "types", such as `Work`, `Contact`, `Product`, `Prize`, and `Series`, which have "fields" such as `title`, `id`, and `name`, and which are connected together so that for an individual `Work` you can ask for its `products`, or its `contributions`. For each of a work's products you can request the ISBN, title, product form, and perhaps its USD library prices.
 
 So GraphQL lets you programatically ask for exactly the data that you need, in two ways.
 
-Firstly it makes it possible to request a precise set of attributes, instead of needing to read data values that you don't need. This helps both Consonance and your client application by reducing the amount of data transferred, and the time taken to return it.
+Firstly, it makes it possible to request a precise set of attributes, instead of needing to read data values that you don't need. This helps both Consonance and your client application by reducing the amount of data transferred, and the time taken to return it.
 
 Secondly, in many cases it also lets you request the rows of data you want. For example you can get only the products for a particular type of work perhaps, or all of the prices but only for ebook products.
 
@@ -47,11 +47,11 @@ ONIX is a popular data interchange format between supply chain partners, and may
 To run a query you need to send a network request with four components.
 
  1. The endpoint. This is the URL that you POST the query to. It is the same as the address at which you normally connect to Consonance, followed by `/graphql`. Typically it will be `https://web.consonance.app/graphql`, but check the page you normally log in at.
- 2. An API key. This is your authorisation to connect and run the query, and acts as a combined user name and password, so guard it closely. You can request one from Consonance support. It's just a string of thirty-two letters and numbers, like "0f9g8bhnhj6594jfjfior9d215kks3w0". In technical terms it will be used as a "bearer token" in the request.
+ 2. An API key. This is your authorisation to connect and run the query, and acts as a combined user name and password, so guard it closely. You can request one from Consonance support. It's a string of thirty-two letters and numbers, like "0f9g8bhnhj6594jfjfior9d215kks3w0". In technical terms it will be used as a "bearer token" in the request.
  3. A GraphQL query which is valid for the Consonance schema. Here's a simple one, which says "give me the titles of the works": `query{works {title}}`
  4. A tool for sending the query and the api key to the end point, and receiving the result.
 
- For the tool we recommend Insomnia, but most programming languages will be able to send the query and get the result, as can a command line tool like `curl`.
+ For the tool we recommend Insomnia, but most programing languages will be able to send the query and get the result, as can a command line tool like `curl`.
  ```
  curl \
   -X POST \
