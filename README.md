@@ -52,7 +52,7 @@ To run a query you need to send a network request with four components.
  4. A tool for sending the query and the api key to the end point, and receiving the result.
 
  For the tool we recommend Insomnia, but most programing languages will be able to send the query and get the result, as can a command line tool like `curl`.
- ```
+ ```sh
  curl \
   -X POST \
   -H "Authorization: Bearer 0f9g8bhnhj6594jfjfior9d215kks3w0" \
