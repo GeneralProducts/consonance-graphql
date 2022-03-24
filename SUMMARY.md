@@ -1,21 +1,21 @@
 # Table of contents
 
-* [README](README.md)
+* [Welcome to the Consonance GraphQL API](README.md)
 
 ## Use headings to create page groups like this one
 
-* Bibliographic
+* [Bibliographic](use-headings-to-create-page-groups-like-this-one/bibliographic/README.md)
   * [Select filtered products and their work](examples/filtered\_products\_and\_their\_work.md)
   * [Select works and their products](examples/products\_and\_their\_works.md)
   * [Select products filtered by price and format](examples/products\_filtered\_by\_price\_and\_format.md)
   * [Select products filtered by work attributes](examples/products\_filtered\_by\_work\_attributes.md)
   * [Sample AI sheet](examples/sample\_ai.md)
-* Workflow
-* Production
+* [Workflow](use-headings-to-create-page-groups-like-this-one/workflow.md)
+* [Production](use-headings-to-create-page-groups-like-this-one/production/README.md)
   * [Sample production request form](examples/sample\_production\_request\_form.md)
-* Legal
-* Financial
-* People
-* Data exchange
-  * [Sample custom report sheet](examples/sample\_custom\_report\_sheet.md)
-  * [Sample dashboard](examples/sample\_dashboard.md)  
+* [Legal](use-headings-to-create-page-groups-like-this-one/legal.md)
+* [Financial](use-headings-to-create-page-groups-like-this-one/financial.md)
+* [People](use-headings-to-create-page-groups-like-this-one/people.md)
+* [Data exchange](use-headings-to-create-page-groups-like-this-one/data-exchange/README.md)
+  * [Sample custom report sheet](use-headings-to-create-page-groups-like-this-one/data-exchange/sample-custom-report-sheet.md)
+  * [Sample dashboard](examples/sample\_dashboard.md)
