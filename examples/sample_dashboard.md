@@ -1,4 +1,4 @@
-## Description
+# Description
 
 Populate a dashboard of charts and graphs using Google Data Studio
 

@@ -1,4 +1,4 @@
-## Description
+# Description
 
 Generate a report in Google Sheets with customisable columns
 

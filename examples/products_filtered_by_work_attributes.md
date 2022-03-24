@@ -1,3 +1,11 @@
+# Description
+
+Filter products by their work attributes
+
+## Explanation
+
+Products are retrieved and filtered by their work attributes.
+
 ```gql
 {
   products(
