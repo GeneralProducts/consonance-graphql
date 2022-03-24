@@ -1,4 +1,6 @@
-# Welcome to the Consonance GraphQL API
+# Getting started
+
+Welcome to the Consonance GraphQL API.
 
 This is where we help you use the flexibility and efficiency of our GraphQL interface to get structured data from your single source of bibliographic truth.
 
