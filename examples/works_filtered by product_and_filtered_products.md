@@ -1,4 +1,4 @@
-## Description
+# Description
 
 Select works that have any products published after 2000-01-01, and their products that were published after 2000-01-01
 

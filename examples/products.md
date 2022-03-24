@@ -1,4 +1,4 @@
-## Description
+# Description
 
 Select products and some of their attributes
 
