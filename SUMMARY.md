@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to the Consonance GraphQL API](README.md)
+* [README](README.md)
 
 ## Use headings to create page groups like this one
 
