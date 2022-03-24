@@ -1,4 +1,4 @@
-# The Consonance GraphQL API
+# Getting started
 
 Welcome to the Consonance GraphQL API.
 
@@ -22,7 +22,7 @@ In some cases it offers different formats of the same data. For example, you may
 
 Similarly you can retrieve product measurements in millimeters, centimeters, or inches, or weights in grams or ounces.
 
-So the main benefit to using the GraphQL API is that it is excellent at dealing with complex data relations. If you want only works of a particular series, their ebook PDF products, their contributors, and the library prices for the products. To represent this in a CSV file would require a set of columns for the work, one set per product, another set for each contributor, and more columns for each price. Pretty soon your spreadsheet is at column HS, has column names like "product_1_price_4" and "contributor_3_last_name", and is unreadable.
+So the main benefit to using the GraphQL API is that it is excellent at dealing with complex data relations. If you want only works of a particular series, their ebook PDF products, their contributors, and the library prices for the products. To represent this in a CSV file would require a set of columns for the work, one set per product, another set for each contributor, and more columns for each price. Pretty soon your spreadsheet is at column HS, has column names like "product\_1\_price\_4" and "contributor\_3\_last\_name", and is unreadable.
 
 In a GraphQL response these relations are expressed in a JSON response that is structured in the same way as your original query, and is readable by any popular programing language. Or even by a human being.
 
@@ -38,25 +38,26 @@ ONIX is a popular data interchange format between supply chain partners, and may
 
 ## Tools and resources
 
-  * https://graphql.org/ for general information about GraphQL
-  * [This](http://consonance-graphql-schema.s3-website-eu-west-1.amazonaws.com/) for a website documentating our GraphQL schema
-  * [Insomnia](https://insomnia.rest/) is our recommended desktop client for developing, testing, and refining your queries. Other tools like [Postman](https://www.postman.com/) are popular, but currently Insomnia has the edge because of its strong support for introspection, and ability to show in-tool documentation for the API.
+* https://graphql.org/ for general information about GraphQL
+* [This](http://consonance-graphql-schema.s3-website-eu-west-1.amazonaws.com) for a website documentating our GraphQL schema
+* [Insomnia](https://insomnia.rest) is our recommended desktop client for developing, testing, and refining your queries. Other tools like [Postman](https://www.postman.com) are popular, but currently Insomnia has the edge because of its strong support for introspection, and ability to show in-tool documentation for the API.
 
 ## Running a query
 
 To run a query you need to send a network request with four components.
 
- 1. The endpoint. This is the URL that you POST the query to. It is the same as the address at which you normally connect to Consonance, followed by `/graphql`. Typically it will be `https://web.consonance.app/graphql`, but check the page you normally log in at.
- 2. An API key. This is your authorisation to connect and run the query, and acts as a combined user name and password, so guard it closely. You can request one from [https://web.consonance.app/support_tickets/new?tab=question](Consonance support). It's a string of thirty-two letters and numbers, like "0g8e7bjnhj6594jfjfior9d215kks3w0". In technical terms it will be used as a "bearer token" in the request.
- 3. A GraphQL query which is valid for the Consonance schema. Here's a simple one, which says "give me the titles of the works": `query{works {title}}`
- 4. A tool for sending the query and the api key to the end point, and receiving the result.
+1. The endpoint. This is the URL that you POST the query to. It is the same as the address at which you normally connect to Consonance, followed by `/graphql`. Typically it will be `https://web.consonance.app/graphql`, but check the page you normally log in at.
+2. An API key. This is your authorisation to connect and run the query, and acts as a combined user name and password, so guard it closely. You can request one from `Consonance support`. It's a string of thirty-two letters and numbers, like "0g8e7bjnhj6594jfjfior9d215kks3w0". In technical terms it will be used as a "bearer token" in the request.
+3. A GraphQL query which is valid for the Consonance schema. Here's a simple one, which says "give me the titles of the works": `query{works {title}}`
+4. A tool for sending the query and the api key to the end point, and receiving the result.
 
- For the tool we recommend Insomnia, but most programing languages will be able to send the query and get the result, as can a command line tool like `curl`.
- ```sh
- curl \
-  -X POST \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H 'Content-Type: application/json; charset=utf-8' \
-  -d '{"query":"query{works {title}}"}'\
-  https://web.consonance.app/graphql
+For the tool we recommend Insomnia, but most programing languages will be able to send the query and get the result, as can a command line tool like `curl`.
+
+```
+curl \
+ -X POST \
+ -H "Authorization: Bearer YOUR_API_KEY" \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"query":"query{works {title}}"}'\
+ https://web.consonance.app/graphql
 ```
