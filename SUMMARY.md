@@ -1,8 +1,6 @@
 # Table of contents
 
-* [README](README.md)
-
-## Use headings to create page groups like this one
+* [Getting started](README.md)
 
 * [Bibliographic](use-headings-to-create-page-groups-like-this-one/bibliographic/README.md)
   * [Select filtered products and their work](examples/filtered\_products\_and\_their\_work.md)
