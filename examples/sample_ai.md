@@ -4,7 +4,7 @@ Generate an AI sheet from a particular work
 
 ## Explanation
 
-Using Google Docs
+Using a combination of GraphQL and Javascript in Google Docs and Apps Script you can populate fields for an AI or tip sheet.
 
 ```gql
 function onOpen() {
@@ -77,7 +77,7 @@ function queryResponse(isbn, key, url) {
   return JSON.parse(stringResponse)
 }
 // This sets default values if "form" is not there - i.e. if you're running this from the script editor
-const main = (form = {isbn13:"9781905005123", key:"758b75086f754661a6a368c9d61ec589", url:"https://web.consonance.app"}) => {
+const main = (form = {isbn13:"YOUR ISBN", key:"YOUR_API_KEY", url:"https://web.consonance.app"}) => {
   const doc = DocumentApp.getActiveDocument()
   const body = doc.getBody();
   const product = queryResponse(form.isbn13, form.key, form.url).data.product
