@@ -47,7 +47,7 @@ ONIX is a popular data interchange format between supply chain partners, and may
 To run a query you need to send a network request with four components.
 
  1. The endpoint. This is the URL that you POST the query to. It is the same as the address at which you normally connect to Consonance, followed by `/graphql`. Typically it will be `https://web.consonance.app/graphql`, but check the page you normally log in at.
- 2. An API key. This is your authorisation to connect and run the query, and acts as a combined user name and password, so guard it closely. You can request one from Consonance support. It's a string of thirty-two letters and numbers, like "0f9g8bhnhj6594jfjfior9d215kks3w0". In technical terms it will be used as a "bearer token" in the request.
+ 2. An API key. This is your authorisation to connect and run the query, and acts as a combined user name and password, so guard it closely. You can [https://web.consonance.app/support_tickets/new?tab=question](request one from Consonance support). It's a string of thirty-two letters and numbers, like "0g8e7bjnhj6594jfjfior9d215kks3w0". In technical terms it will be used as a "bearer token" in the request.
  3. A GraphQL query which is valid for the Consonance schema. Here's a simple one, which says "give me the titles of the works": `query{works {title}}`
  4. A tool for sending the query and the api key to the end point, and receiving the result.
 
@@ -55,7 +55,7 @@ To run a query you need to send a network request with four components.
  ```sh
  curl \
   -X POST \
-  -H "Authorization: Bearer 0f9g8bhnhj6594jfjfior9d215kks3w0" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
   -H 'Content-Type: application/json; charset=utf-8' \
   -d '{"query":"query{works {title}}"}'\
   https://web.consonance.app/graphql
