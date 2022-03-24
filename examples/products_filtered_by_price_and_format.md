@@ -1,14 +1,13 @@
-## Description
+# Description
+#
+# Filter products by price and format
+#
+# Explanation
+#
+# Only products in a specified format with a price equal to or less than the specified value are retrieved, 
+with their id, ISBN, title and publishing status. In this example, only eBooks priced at 0.99 or lower are retrieved. 
+# This could help with identifying price errors or confirming all relevant products have been included in a price promotion.
 
-Filter products by price and format
-
-## Explanation
-
-Only products in a specified format with a price equal to or less than the specified value are retrieved,
-with their id, ISBN, title and publishing status. In this example, only eBooks priced at 0.99 or lower are retrieved.
-This could help with identifying price errors or confirming all relevant products have been included in a price promotion.
-
-```gql
 {
 	{
   products(
@@ -33,4 +32,4 @@ This could help with identifying price errors or confirming all relevant product
 		}
   }
 }
-```
+
