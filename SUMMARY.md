@@ -17,3 +17,4 @@
 * [Data exchange](use-headings-to-create-page-groups-like-this-one/data-exchange/README.md)
   * [Sample custom report sheet](use-headings-to-create-page-groups-like-this-one/data-exchange/sample-custom-report-sheet.md)
   * [Sample dashboard](examples/sample\_dashboard.md)
+  * [Test diagram](examples/diagram.md)
