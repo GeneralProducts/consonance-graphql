@@ -10,7 +10,7 @@ Create a new sheet in Google Sheets and navigate to Extensions > Apps Script fro
 
 Paste the code below into this screen, replacing any existing text. 
 
-Replace YOUR_API_KEY with the API key provided by Consonance support.
+Replace YOUR_API_KEY in the code with the API key provided by Consonance support.
 
 This script will generate a report of every field currently available in Consonance's GraphQL schema. If you would like to edit or delete any columns to produce a smaller report you can refer to the inline notes for help doing that.
 
