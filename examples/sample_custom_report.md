@@ -8,7 +8,11 @@ Using a combination of GraphQL and Javascript in Google Sheets and Apps Script y
 
 Create a new sheet in Google Sheets and navigate to Extensions > Apps Script from the main navigation bar to open the Apps Script editor.
 
-Paste the code below into this screen, replacing any existing text. This script will generate a report of every field currently available in Consonance's GraphQL schema. If you would like to edit or delete any columns to produce a smaller report you can refer to the inline notes for help doing that.
+Paste the code below into this screen, replacing any existing text. 
+
+Replace YOUR_API_KEY with the API key provided by Consonance support.
+
+This script will generate a report of every field currently available in Consonance's GraphQL schema. If you would like to edit or delete any columns to produce a smaller report you can refer to the inline notes for help doing that.
 
 Choose *Run* from the main navigation bar to generate your report. You may be prompted to authorize your script by signing into your Google account and choosing *allow*. This grants permission for the script to run.
 
@@ -115,7 +119,7 @@ Go back to your sheet and this should now be populated with the columns of data 
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        authorization: "Bearer 56ff84fdac5d4bf985f8f0def461e4a9",
+        authorization: "Bearer YOUR_API_KEY",
       },
       payload: payload,
     });
