@@ -7,14 +7,14 @@
   * [Select works and their products](examples/products\_and\_their\_works.md)
   * [Select products filtered by price and format](examples/products\_filtered\_by\_price\_and\_format.md)
   * [Select products filtered by work attributes](examples/products\_filtered\_by\_work\_attributes.md)
-  * [Sample AI sheet](examples/sample\_ai.md)
+    * [Select works and their relevant marketing material](examples/works\_and\_marketing\_material.md)
 * Workflow
 * Production
-  * [Sample production request form](examples/sample\_production\_request\_form.md)
+  * [Select works and their product production run details](examples/works\_and\_product\_production\_run\_details.md)
+
 * Legal
 * Financial
 * People
 * Data exchange
   * [Sample custom report sheet](/examples/sample\_custom\_report.md)
   * [Sample dashboard](examples/sample\_dashboard.md)
-  * [Test diagram](examples/diagram.md)
