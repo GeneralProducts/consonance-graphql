@@ -6,12 +6,14 @@
   * [Select works and their products](examples/products\_and\_their\_works.md)
   * [Select products filtered by price and format](examples/products\_filtered\_by\_price\_and\_format.md)
   * [Select products filtered by work attributes](examples/products\_filtered\_by\_work\_attributes.md)
-* [Workflow](use-headings-to-create-page-groups-like-this-one/workflow.md)
-* [Production](use-headings-to-create-page-groups-like-this-one/production/README.md)
-  * [Select works and their production run details](production/select-works-and-their-production-run-details.md)
-* [Legal](use-headings-to-create-page-groups-like-this-one/legal.md)
-* [Financial](use-headings-to-create-page-groups-like-this-one/financial.md)
-* [People](use-headings-to-create-page-groups-like-this-one/people.md)
-* [Data exchange](use-headings-to-create-page-groups-like-this-one/data-exchange/README.md)
-  * [Sample custom report sheet](examples/sample\_custom\_report.md)
+    * [Select works and their relevant marketing material](examples/works\_and\_marketing\_material.md)
+* Workflow
+* Production
+  * [Select works and their product production run details](examples/works\_and\_product\_production\_run\_details.md)
+
+* Legal
+* Financial
+* People
+* Data exchange
+  * [Sample custom report sheet](/examples/sample\_custom\_report.md)
   * [Sample dashboard](examples/sample\_dashboard.md)
