@@ -10,6 +10,7 @@
   * [Sample AI sheet](examples/sample\_ai.md)
 * Workflow
 * Production
+  * [Select works and their production run details](examples/works\_and\_production\_run\_details.md)
   * [Sample production request form](examples/sample\_production\_request\_form.md)
 * Legal
 * Financial
