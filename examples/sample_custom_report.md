@@ -6,9 +6,9 @@ Generate a report in Google Sheets with customisable columns
 
 Using a combination of GraphQL and Javascript in Google Sheets and Apps Script you can generate a custom report with your choice of column headings.
 
-Create a new sheet in Google Sheets and navigate to Extensions > Apps Script from the main navigation bar to open the Apps Script editor.
+Create a new sheet in [Google Sheets](https://sheets.google.com/) and navigate to **Extensions > Apps Script** from the main navigation bar to open the Apps Script editor.
 
-Paste the code below into this screen, replacing any existing text. 
+Paste the code below into this screen, replacing any existing text.
 
 Replace YOUR_API_KEY in the code with the API key provided by Consonance support.
 
