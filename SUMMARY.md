@@ -1,8 +1,7 @@
 # Table of contents
 
 * [Getting started](README.md)
-
-* Bibliographic
+* [Bibliographic](use-headings-to-create-page-groups-like-this-one/bibliographic/README.md)
   * [Select filtered products and their work](examples/filtered\_products\_and\_their\_work.md)
   * [Select works and their products](examples/products\_and\_their\_works.md)
   * [Select products filtered by price and format](examples/products\_filtered\_by\_price\_and\_format.md)
@@ -11,9 +10,17 @@
 * Workflow
 * Production
   * [Select works and their product production run details](examples/works\_and\_product\_production\_run\_details.md)
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb0535f69352f5a76ddcab35ba2cb75511cd0fdf
 * Legal
 * Financial
 * People
 * Data exchange
   * [Sample custom report sheet](/examples/sample\_custom\_report.md)
+<<<<<<< HEAD
   * [Sample dashboard](examples/sample\_dashboard.md)
+=======
+  * [Sample dashboard](examples/sample\_dashboard.md)
+>>>>>>> fb0535f69352f5a76ddcab35ba2cb75511cd0fdf
