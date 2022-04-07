@@ -127,7 +127,12 @@ Go back to your sheet and this should now be populated with the columns of data 
     return JSON.parse(stringResponse)
   }
   
-  // The function below generates your column headings. Each string of text in quotes refers to a new column and you can name these however is most helpful to you. The order of this list is the order your column headings will appear, so you can rearrange them as you please, but you'll need to remember to also rearrange the equivalent rows in the second function below so that they match up. We have kept the names here matching the fields in Consonance's GraphQL schema for clarity and have included all fields currently available in the schema.
+  // The function below generates your column headings. Each string of text in quotes refers to
+  // a new column and you can name these however is most helpful to you. The order of this list
+  // is the order your column headings will appear, so you can rearrange them as you please, but
+  // you'll need to remember to also rearrange the equivalent rows in the second function below
+  // so that they match up. We have kept the names here matching the fields in Consonance's
+  // GraphQL schema for clarity and have included all fields currently available in the schema.
 
   function header() {
     const headRow = [
@@ -188,7 +193,11 @@ Go back to your sheet and this should now be populated with the columns of data 
     return headRow
   }
   
-  // The function below populates the rows with your data using the column headings you've defined above. If you have added, rearranged or deleted any headings in the above function you will also need to add, rearrange or delete the equivalent row.push line here or your data won't appear in the correct columns. The field names here must match how they are named in the GraphQL schema in order for them to retrieve the correct data.
+  // The function below populates the rows with your data using the column headings you've
+  // defined above. If you have added, rearranged or deleted any headings in the above function
+  // you will also need to add, rearrange or delete the equivalent row.push line here or your
+  // data won't appear in the correct columns. The field names here must match how they are
+  // named in the GraphQL schema in order for them to retrieve the correct data.
 
   function productToArray(product) {
     const row = []
