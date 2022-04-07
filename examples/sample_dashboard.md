@@ -20,4 +20,4 @@ Refresh the data in your report with choosing **View > Refresh Data** from the m
 
 Total products filtered by format, publication status, sales territories or publication date
 
-![](images/sampledashboard.png)
+![](/images/sampledashboard.png)
