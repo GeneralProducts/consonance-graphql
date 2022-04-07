@@ -8,7 +8,7 @@ All product IDs are retrieved for a single work along with their relevant produc
 
 ```gql
 query WorkType {
-  work(workSearch: {idEq: 91804}) {
+  work(workSearch: {idEq: WORKID}) {
     id
   inHouseWorkReference
     title
