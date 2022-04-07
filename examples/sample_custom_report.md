@@ -6,29 +6,25 @@ Generate a report in Google Sheets with customisable columns
 
 Using a combination of GraphQL and Javascript in Google Sheets and Apps Script you can generate a custom report with your choice of column headings.
 
+Create a new sheet in Google Sheets and navigate to Extensions > Apps Script from the main navigation bar to open the Apps Script editor.
+
+Paste the code below into this screen, replacing any existing text. 
+
+Replace YOUR_API_KEY in the code with the API key provided by Consonance support.
+
+This script will generate a report of every field currently available in Consonance's GraphQL schema. If you would like to edit or delete any columns to produce a smaller report you can refer to the inline notes for help doing that.
+
+Choose *Run* from the main navigation bar to generate your report. You may be prompted to authorize your script by signing into your Google account and choosing *allow*. This grants permission for the script to run.
+
+Go back to your sheet and this should now be populated with the columns of data you've specified.
+
 ```gql
-function onOpen() {
-    SpreadsheetApp.getUi() 
-      .createMenu('Consonance')
-      .addItem('Show options', 'showSidebar')
-      .addToUi();
-  }
-  
-  function showSidebar() {
-    var html = HtmlService.createHtmlOutputFromFile('sidebar')
-      .setTitle('Consonance');
-    SpreadsheetApp.getUi() 
-      .showSidebar(html);
-  }
-  
   const main = () => {
     const products = queryResponse().data.products
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     const sheet = ss.getSheetByName("sheet1");
     sheet.appendRow(header())
-    
     const dataArray = dataToArray(products);
-    ss.getRange("product_data").clearContent()
     ss.setNamedRange("product_data", sheet.getRange(2, 1, dataArray.length, dataArray[0].length))
     ss.getRange("product_data").setValues(dataArray)
     sheet.autoResizeColumns(1, dataArray[0].length)
@@ -131,6 +127,13 @@ function onOpen() {
     return JSON.parse(stringResponse)
   }
   
+  // The function below generates your column headings. Each string of text in quotes refers to
+  // a new column and you can name these however is most helpful to you. The order of this list
+  // is the order your column headings will appear, so you can rearrange them as you please, but
+  // you'll need to remember to also rearrange the equivalent rows in the second function below
+  // so that they match up. We have kept the names here matching the fields in Consonance's
+  // GraphQL schema for clarity and have included all fields currently available in the schema.
+
   function header() {
     const headRow = [
       "id",
@@ -190,6 +193,12 @@ function onOpen() {
     return headRow
   }
   
+  // The function below populates the rows with your data using the column headings you've
+  // defined above. If you have added, rearranged or deleted any headings in the above function
+  // you will also need to add, rearrange or delete the equivalent row.push line here or your
+  // data won't appear in the correct columns. The field names here must match how they are
+  // named in the GraphQL schema in order for them to retrieve the correct data.
+
   function productToArray(product) {
     const row = []
   
@@ -248,5 +257,9 @@ function onOpen() {
     row.push(product.isForSaleWorldwide)
     return row
   }
+  
+  
+  
+  
   
 ```
