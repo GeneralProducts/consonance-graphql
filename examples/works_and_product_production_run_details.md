@@ -4,12 +4,11 @@ Select works and production run information for their products
 
 ## Explanation
 
-<<<<<<< HEAD
 All product IDs are retrieved for a single work along with their relevant production run information.
 
 ```gql
 query WorkType {
-  work(workSearch: {idEq: 91804}) {
+  work(workSearch: {idEq: WORKID}) {
     id
   inHouseWorkReference
     title
@@ -85,30 +84,8 @@ query WorkType {
               }
             }
   }
-
    projectStage
    season
   }
  }
-
-
-=======
-All products are retrieved for a single work along with their relevant production run information.
-
-```gql
-{
-  works {
-    id
-    title
-    lcSubjectHeading
-    products {
-      id
-      publicationDate
-      isbn {
-        isbn13
-      }
-    }
-  }
-}
->>>>>>> fb0535f69352f5a76ddcab35ba2cb75511cd0fdf
 ```
