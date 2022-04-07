@@ -6,9 +6,9 @@ Populate a dashboard of charts and graphs using Google Data Studio
 
 Using Google Sheets and Google Data Studio you can populate charts and graphs to create a dashboard of your data.
 
-First, you'll need to build a [/sample_custom_report.md](custom report) that contains all of the fields you need.
+First, you'll need to build a [custom report][/sample_custom_report.md] that contains all of the fields you need.
 
-Create a new report on [https://datastudio.google.com/](Google Data Studio) and select **Google Sheets** from the selection of Google Connectors.
+Create a new report on [Google Data Studio](https://datastudio.google.com/) and select **Google Sheets** from the selection of Google Connectors.
 
 Link your previously created custom report created in Google Sheets as a data source by selecting the spreadsheet. There will be a pop-up warning you that you are about to add data to your report; choose **Add to Report** to continue.
 
