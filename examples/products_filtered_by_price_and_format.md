@@ -12,7 +12,6 @@ This could help with identifying price errors or confirming all relevant product
 
 ```gql
 {
- {
     products(
         priceSearch: {amountLteq: 0.99}
         productSearch: {onix21ProductFormCodeIn: [DG]}
