@@ -84,11 +84,8 @@ query WorkType {
               }
             }
   }
-
    projectStage
    season
   }
  }
-
-
 ```

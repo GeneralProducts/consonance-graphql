@@ -86,6 +86,7 @@ query WorkType {
     subtitle
     id
   }
+ }
   similarProducts{
    inHouseEdition{id}
    contributions{
@@ -98,11 +99,7 @@ query WorkType {
    id
    isbn{isbn13}
    fullTitle
-   
   }
  }
-
-}
-
-
+ }
 ```
