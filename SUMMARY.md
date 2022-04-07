@@ -12,6 +12,3 @@
 * Data exchange
   * [Sample custom report sheet](/examples/sample\_custom\_report.md)
   * [Sample dashboard](examples/sample\_dashboard.md)
-* Data exchange
-  * [Sample custom report sheet](/examples/sample\_custom\_report.md)
-  * [Sample dashboard](examples/sample\_dashboard.md)
