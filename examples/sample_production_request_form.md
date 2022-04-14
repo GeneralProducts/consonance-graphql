@@ -8,7 +8,7 @@ Using a combination of GraphQL and Javascript in Google Docs and Apps Script you
 
 Create a new document in Google Docs and navigate to **Tools > Script Editor**
 
-From the Script Editor screen select the plus icon next to **Files** and create a new HTML file. The code below will generate interactive sidebar that can be accessed from the main navigation of your document with a form that will allow you to populate a new AI sheet by inputting an ISBN. It can be customised as with a typical HTML document using CSS. Here we have included some basic font styles, but these can be changed to suit your preferences.
+From the Script Editor screen select the plus icon next to **Files** and create a new HTML file. The code below will generate interactive sidebar that can be accessed from the main navigation of your document with a form that will allow you to populate a production request form by inputting a Work ID. It can be customised as with a typical HTML document using CSS. We have included some basic font styles, but these can be changed to suit your preferences.
 
 ```gql
 <!DOCTYPE html>
