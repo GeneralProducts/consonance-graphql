@@ -20,4 +20,4 @@ Refresh the data in your report with choosing **View > Refresh Data** from the m
 
 Total products filtered by format, publication status, sales territories or publication date
 
-![](/images/sampledashboard.png)
+![Google Data Studio screenshot. The dashboard shows a pie chart, a line graph, a bar chart and a pivot table.](/images/sampledashboard.png)
