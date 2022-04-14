@@ -114,8 +114,8 @@ function queryResponse(id, key, url) {
       name
     }
     products {
-		  id
-		  isbn {isbn10 isbn13 isbnWithDashes}
+    id
+    isbn {isbn10 isbn13 isbnWithDashes}
       publicationDate
       shortDescription: marketingTexts(variantIn: [SHORT_DESCRIPTION]) {
         externalText
@@ -167,12 +167,12 @@ function queryResponse(id, key, url) {
           keyNames
           personName
           personNameInverted
-				}
-				... on Organisation {
-					organisationName
+    }
+    ... on Organisation {
+     organisationName
         }
-		  }
-	  }
+    }
+   }
     
     productionRuns {
       id
@@ -312,8 +312,8 @@ body.editAsText().replaceText(pattern, today);
 
 Here is an example of how your Google doc might look before the script runs.
 
-![](/images/sampleprodreqformbefore.png)
+![Google Docs screenshot. The document has the heading Consonance Production Request Form and has many fields that are unpopulated.](/images/sampleprodreqformbefore.png)
 
-This is how it might look after choosing the 'Find' button. 
+This is how it might look after choosing the 'Find' button.
 
-![](/images/sampleprodreqformafter.png)
+![Google Docs screenshot. The previously unpopulated fields now have relevant information retrieved from Consonance.](/images/sampleprodreqformafter.png)
