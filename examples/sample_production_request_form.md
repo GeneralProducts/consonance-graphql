@@ -36,14 +36,14 @@ From the Script Editor screen select the plus icon next to **Files** and create 
   </head>
   <body>
     <p>
-      Please type in the URL, Key, and ISBN13 that you want, and choose Find.
+      Please type in the URL, Key, and Work ID that you want, and choose Find.
     <ul>
       <li>URL is usually https://web.consonance.app</li>
       <li>Key will be your API that you get by emailing support@consonance.app</li>
-      <li>ISBN is something like 9781905005123</li>
+      <li>Work ID is something like 31604</li>
     </ul>
     </p>
-    <form id="isbnGetter">
+    <form id="workGetter">
       <p class="semibold">
         <label>Consonance URL</label><br />
         <input type="text" value="https://web.consonance.app" id="url" name="url">
@@ -54,14 +54,17 @@ From the Script Editor screen select the plus icon next to **Files** and create 
         <input type="text" value="" id="key" name="key">
       </p>
       <p class="semibold">
-        <label>ISBN</label>
+        <label>Work</label>
         <br/>
-        <input type="text" value="" id="isbn13" name="isbn13">
+        <input type="text" value="" id="id" name="id">
        </p>
-      <input type="button" value="Find" onclick="google.script.run.main(isbnGetter)">
+      <input type="button" value="Find" onclick="google.script.run.main(workGetter)">
     </form>
   </body>
 </html>
+
+
+
 ```
 
 Still on the Script Editor screen, select Code.gs from the file section. Paste the code below, which will be your main script.
