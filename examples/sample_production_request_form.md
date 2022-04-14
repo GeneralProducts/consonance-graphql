@@ -89,7 +89,7 @@ function showSidebar() {
 function queryResponse(id, key, url) {
   const queryString = `
     query {
-  works(workSearch: {idEq: 91804}) {
+  works(workSearch: {idEq: "${id}"}) {
     clientId
     id
     identifyingDoi
