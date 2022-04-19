@@ -11,7 +11,6 @@ Works are retrieved along with their products. This is structured so that the pr
   works {
     id
     title
-    lcSubjectHeading
     products {
       id
       publicationDate

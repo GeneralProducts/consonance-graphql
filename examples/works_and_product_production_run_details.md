@@ -4,11 +4,11 @@ Select works and production run information for their products
 
 ## Explanation
 
-All product IDs are retrieved for a single work along with their relevant production run information.
+Product IDs are retrieved for a single work along with their relevant production run information.
 
 ```gql
 query WorkType {
-  work(workSearch: {idEq: WORKID}) {
+  work(workSearch: {idEq: YOUR_WORK_ID}) {
     id
   inHouseWorkReference
     title
