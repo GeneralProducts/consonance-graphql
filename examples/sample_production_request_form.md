@@ -62,9 +62,6 @@ From the Script Editor screen select the plus icon next to **Files** and create 
     </form>
   </body>
 </html>
-
-
-
 ```
 
 Still on the Script Editor screen, select Code.gs from the file section. Paste the code below, which will be your main script.
