@@ -8,7 +8,7 @@ Products within a work are listed along with relevant marketing material such as
 
 ```gql
 query WorkType {
-  work(workSearch: {idEq: 91804}) {
+  work(workSearch: {idEq: YOUR_WORK_ID}) {
     id
   identifyingDoi
   inHouseWorkReference
