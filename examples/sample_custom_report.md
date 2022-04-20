@@ -391,7 +391,6 @@ contributions {
       "Work Similar Product Full Title",
       "Work Similar Product In House Edition ID",
       "Work Similar Product Contributor Name",
-      "Work Similar Product ONIX Contributor Role Description",
       "Work Similar Product ONIX Contributor Role Description"
     ]
   
