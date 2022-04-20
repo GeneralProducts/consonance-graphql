@@ -18,8 +18,6 @@ Choose *Run* from the main navigation bar to generate your report. You may be pr
 
 Go back to your sheet and this should now be populated with the columns of data you've specified.
 
-![Google Sheets screenshot showing a populated spreadsheet with metadata retrieved from Consonance.](/images/samplecustomreport.png)
-
 ```gql
     const main = () => {
     const products = queryResponse().data.products
@@ -535,3 +533,7 @@ contributions {
     return row
   }
 ```
+
+Here is an example of how your report could look.
+
+![Google Sheets screenshot showing a populated spreadsheet with metadata retrieved from Consonance.](/images/samplecustomreport.png)
