@@ -7,6 +7,7 @@
   * [Select products filtered by price and format](examples/products\_filtered\_by\_price\_and\_format.md)
   * [Select products filtered by work attributes](examples/products\_filtered\_by\_work\_attributes.md)
   * [Select works and their relevant marketing material](examples/works\_and\_marketing\_material.md)
+    * [Sample AI/Tip Sheet](examples/sample\_AI.md)
 * Production
   * [Select works and their product production run details](examples/works\_and\_product\_production\_run\_details.md)
     * [Sample production request form](examples/sample\_production\_request\_form.md)
