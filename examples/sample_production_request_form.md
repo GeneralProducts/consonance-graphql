@@ -1,6 +1,6 @@
 # Description
 
-Generate a production request form for a particular product
+Generate a production request form for a particular product using Google Docs
 
 ## Explanation
 
@@ -56,7 +56,7 @@ From the Script Editor screen select the plus icon next to **Files** and create 
       <p class="semibold">
         <label>Work</label>
         <br/>
-        <input type="text" value="" id="id" name="id">
+        <input type="text" value="" id="work" name="work">
        </p>
       <input type="button" value="Find" onclick="google.script.run.main(workGetter)">
     </form>
@@ -89,7 +89,7 @@ function showSidebar() {
 function queryResponse(id, key, url) {
   const queryString = `
     query {
-  works(workSearch: {idEq: "${id}"}) {
+    works(workSearch: {idEq: "${id}"}) {
     clientId
     id
     identifyingDoi
