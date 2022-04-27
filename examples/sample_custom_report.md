@@ -532,8 +532,8 @@ contributions {
     row.push(product.work.similarProducts[0]?.contributions[0]?.onixContributorRole?.description)
     return row
   }
+  
 ```
-
 Here is an example of how your report could look.
 
 ![Google Sheets screenshot showing a populated spreadsheet with metadata retrieved from Consonance.](/images/samplecustomreport.png)
