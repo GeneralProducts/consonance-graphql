@@ -147,9 +147,9 @@ function queryResponse(isbn, key, url) {
                 caption
           }
           mainBicCode: subjectCodes(schemesIn: [BIC], mainOnly: true) {
-			      code
-			      description
-		      }
+         code
+         description
+        }
           mainThema: subjectCodes(schemesIn: [THEMA], mainOnly: true) {
             code
             description
@@ -200,7 +200,7 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
   body.replaceText("^.*contributorNames_*$", product.work.contributorPrettyList || "");
   body.replaceText("^.*Blurb_*$", product.shortDescription[0]?.externalText || "");
   body.replaceText("^.*marketingText_*$", product.marketingTexts[0]?.externalText || "");
-    body.replaceText("^.*pubDate_*$", product.publicationDate || "-");
+  body.replaceText("^.*pubDate_*$", product.publicationDate || "-");
   body.replaceText("^.*Subtitle_*$", product.subtitle || "");
   body.replaceText("^.*ISBN13_*$", product.isbn.isbnWithDashes || "-");
   body.replaceText("^.*FORMAT_*$", product.inHouseEdition.name || "-");
@@ -220,6 +220,7 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
   insertImage(doc, product.work.supportingResources[0]?.url);
 }
 ```
+
 Here is an example of how your AI could look before it is populated.
 
 ![Google Docs screenshot showing an AI sheet containing templated text.](/images/sampleAI.png)
