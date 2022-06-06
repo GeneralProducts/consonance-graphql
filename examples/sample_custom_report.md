@@ -12,7 +12,7 @@ Paste the code below into this screen, replacing any existing text, and add your
 
 This script will generate a report of every field currently available in Consonance's GraphQL schema. If you would like to edit or delete any columns to produce a smaller report you can refer to the inline notes for help.
 
-Choose *Run* from the main navigation bar to generate your report. You may be prompted to authorize your script by signing into your Google account and choosing *allow*. This grants permission for the script to run.
+Choose *Run* from the main navigation bar to generate your report. You may be prompted to authorize your script by signing into your Google account and choosing *Allow*. This grants permission for the script to run.
 
 Go back to your sheet and this should now be populated with the columns of data you've specified.
 
@@ -285,7 +285,7 @@ function productToArray(product) {
 // and must match how it is named the GraphQL schema to retrieve the correct data.
 
 // It may be easier to first delete columns you do not need before reordering the remaining
-// columns into your desired order. Alternatively you can add a double forward slash (//) to
+// columns into your desired order. Alternatively you can add a double forward slash to
 // the start of a particular row, and when the script runs that line of code will be ignored.
 
 function getFieldData(fieldType, product = null) {
