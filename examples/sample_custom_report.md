@@ -17,7 +17,7 @@ Choose *Run* from the main navigation bar to generate your report. You may be pr
 Go back to your sheet and this should now be populated with the columns of data you've specified.
 
 ```gql
-// Replace the text YOUR_API_KEY below with the API key provided to you by Consonance support.
+// Replace the text YOUR_API_KEY below with the API key provided by Consonance support.
 const API_KEY = 'YOUR_API_KEY';
 
 const FIELD_TYPE = Object.freeze({
