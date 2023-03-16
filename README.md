@@ -22,6 +22,8 @@ In some cases it offers different formats of the same data. For example, you may
 
 Similarly you can retrieve product measurements in millimeters, centimeters, or inches, or weights in grams or ounces.
 
+Using mutations you can also make changes to the data and return query results. With this powerful feature you have the potential to modify products, automate tasks or build a completely bespoke metadata management front end.
+
 So the main benefit to using the GraphQL API is that it is excellent at dealing with complex data relations. If you want only works of a particular series, their ebook PDF products, their contributors, and the library prices for the products. To represent this in a CSV file would require a set of columns for the work, one set per product, another set for each contributor, and more columns for each price. Pretty soon your spreadsheet is at column HS, has column names like "product\_1\_price\_4" and "contributor\_3\_last\_name", and is unreadable.
 
 In a GraphQL response these relations are expressed in a JSON response that is structured in the same way as your original query, and is readable by any popular programing language. Or even by a human being.
