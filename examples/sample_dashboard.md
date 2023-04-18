@@ -6,7 +6,7 @@ Populate a dashboard of charts and graphs using Google Looker Studio
 
 Using Google Sheets and Google Looker Studio you can populate charts and graphs to create a dashboard of your data.
 
-First, you'll need to build a [/sample_custom_report.md](custom report) that contains all of the fields you need.
+First, you'll need to build a [custom report](/examples/sample\_custom\_report.md) that contains all of the fields you need and run this custom report at least once.
 
 Create a new report on [https://lookerstudio.google.com/](Google Looker Studio) and select **Google Sheets** from the selection of Google Connectors.
 
@@ -20,4 +20,4 @@ Refresh the data in your report with choosing **View > Refresh Data** from the m
 
 Total products filtered by format, publication status, sales territories or publication date
 
-![](images/sampledashboard.png)
+![Google Data Studio screenshot. The dashboard shows a pie chart, a line graph, a bar chart and a pivot table.](/images/sampledashboard.png)

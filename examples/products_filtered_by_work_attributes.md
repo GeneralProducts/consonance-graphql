@@ -4,7 +4,7 @@ Filter products by their work attributes
 
 ## Explanation
 
-Products are retrieved and filtered by their work attributes.
+Products are retrieved and filtered by their work attributes. In this example only print products are retrieved with a title that contains the search criteria "phys".
 
 ```gql
 {

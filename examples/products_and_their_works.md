@@ -4,7 +4,7 @@ Select products and their works
 
 ## Explanation
 
-Products are retrieved along with their work and the Library of Congress subject heading, which is held against the work only
+Products are retrieved along with their work. In this example the Library of Congress subject heading, which is held against the work only, is also retrieved.
 
 ```gql
 {
