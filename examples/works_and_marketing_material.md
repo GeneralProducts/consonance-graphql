@@ -1,4 +1,4 @@
-# Description
+# Select works and their relevant marketing material
 
 Select works and their marketing material
 
@@ -6,35 +6,33 @@ Select works and their marketing material
 
 Products within a work are listed along with relevant marketing material such as description copy, prizes and subject classifications.
 
-```gql
-query WorkType {
-  work(workSearch: {idEq: YOUR_WORK_ID}) {
+```
+query GetWorkDetailsById($workId: String!) {
+  work(workSearch: {idEq: $workId}) {
     id
-  identifyingDoi
-  inHouseWorkReference
+    identifyingDoi
+    inHouseWorkReference
     title
     subtitle
-  authorshipDescription
-  contributorPrettyList
-  
+    authorshipDescription
+    contributorPrettyList
     contributions {
       id
       productIds
-   onixContributorRoleCode
-   onixContributorRole {description}
+      onixContributorRoleCode
+      onixContributorRole {description}
       contributor {
         __typename
         name
       }
     }
-  editionNumber
-  
-  mainBicCode: subjectCodes(schemesIn: [BIC], mainOnly: true) {
+    editionNumber
+    mainBicCode: subjectCodes(schemesIn: [BIC], mainOnly: true) {
       __typename
       code
       description
       main
-  }
+    }
     mainThema: subjectCodes(schemesIn: [THEMA], mainOnly: true) {
       __typename
       code
@@ -49,60 +47,56 @@ query WorkType {
       code
       description
     }
-  marketingTexts{
-   onixContentAudienceCodes
-   onixContentAudiences{description}
-   id 
-   fromDate
-   externalTextNumberOfCharacters
-   externalText
-   internalTextNumberOfCharacters
-   internalText
+    marketingTexts {
+      onixContentAudienceCodes
+      onixContentAudiences {description}
+      id
+      fromDate
+      externalTextNumberOfCharacters
+      externalText
+      internalTextNumberOfCharacters
+      internalText
+    }
+    marketingTier
+    onixEditionTypeCodes
+    prizes {
+      id
+      prizeName
+      onixPrizeAchievementCode
+      prizeJury
+      prizeYear
+      prizeStatement
+      prizeable {id}
+      onixPrizeAchievement {
+        __typename
+        value
+        code
+        description
+        notes
+      }
+      productIds
+    }
+    season
+    seriesMemberships {
+      series {
+        __typename
+        name
+        subtitle
+        id
+      }
+    }
+    similarProducts {
+      inHouseEdition {id}
+      contributions {
+        __typename
+        contributor {name}
+        onixContributorRole {description}
+      }
+      authorshipDescription
+      id
+      isbn {isbn13}
+      fullTitle
+    }
   }
-  marketingTier
-  onixEditionTypeCodes
-  prizes {
-   id
-   prizeName
-   onixPrizeAchievementCode
-   prizeJury
-   prizeYear
-   prizeStatement
-   prizeable{id}
-   onixPrizeAchievement{
-    __typename
-    value
-    code
-    description
-    notes
-   }
-   productIds
-  }
-   season
-  seriesMemberships{
-   series{
-    __typename
-    name
-    subtitle
-    id
-  }
-  similarProducts{
-   inHouseEdition{id}
-   contributions{
-    __typename
-    contributor{name}
-    onixContributorRole{description}
-    
-   }
-   authorshipDescription
-   id
-   isbn{isbn13}
-   fullTitle
-   
-  }
- }
-
 }
-
-
 ```
