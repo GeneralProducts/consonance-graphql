@@ -90,7 +90,7 @@ function showSidebar() {
 
 function queryResponse(isbn, key, url) {
   const queryString = `
-    query {
+    query ProductsByISBN{
       product(productSearch: {isbn13Eq: "${isbn}"}) {
         id
         fullTitle
