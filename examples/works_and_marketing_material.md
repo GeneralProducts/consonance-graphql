@@ -100,3 +100,11 @@ query GetWorkDetailsById($workId: String!) {
   }
 }
 ```
+
+Define your work ID variable:
+
+```
+{
+  "workId": YOUR_WORK_ID_HERE
+}
+```

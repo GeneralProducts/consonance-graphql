@@ -19,5 +19,12 @@ query GetContractFinancials($contractId: Int!) {
     remainderRateOverCost
   }
 }
+```
 
+Define your contract ID variable:
+
+```
+{
+  "contractId": YOUR_CONTRACT_ID_HERE
+}
 ```

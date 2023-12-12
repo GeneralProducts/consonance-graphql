@@ -1,6 +1,6 @@
 # Select works and their products
 
-Select products and their works
+Select all products and their works
 
 ## Explanation
 
@@ -21,5 +21,4 @@ query GetProductDetails {
     }
   }
 }
-
 ```

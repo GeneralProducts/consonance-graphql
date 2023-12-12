@@ -22,5 +22,12 @@ query GetProfessionalDetails($personId: Int!) {
     }
   }
 }
+```
 
+Define your person contact ID variable:
+
+```
+{
+  "personId": YOUR_PERSON_ID_HERE
+}
 ```

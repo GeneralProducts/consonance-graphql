@@ -30,5 +30,12 @@ query GetPersonProfile($personId: Int!) {
     genderClarification
   }
 }
+```
 
+Define your person contact ID variable:
+
+```
+{
+  "personId": YOUR_PERSON_ID_HERE
+}
 ```

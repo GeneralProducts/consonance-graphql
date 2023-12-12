@@ -9,10 +9,10 @@ description: Select basic identifying details for an organisation.
 Organisation IDs are retrieved for a single organisation along with relevant identifying information.
 
 ```
-query GetOrgDetails($organisationId: Int!) {
-  organisation(id: $organisationId) {
+query GetOrgDetailsByName($organisationName: String!) {
+  organisation(organisationSearch: {nameEq: $organisationName}) {
     id
-    corporateName
+    organisationName
     dunsNumber
     globalLocationNumber
     inhouseCustomerId
@@ -25,4 +25,12 @@ query GetOrgDetails($organisationId: Int!) {
   }
 }
 
+```
+
+Define your organisation name variable:
+
+```
+{
+  "organisationName": "Name here"
+}
 ```
