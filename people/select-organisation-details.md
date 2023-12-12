@@ -18,6 +18,7 @@ query GetOrgDetails($organisationId: Int!) {
     inhouseCustomerId
     inhouseSupplierId
     organisationCountry
+    isni
     ringgoldId
     standardAddressNumber
     vatNumber
