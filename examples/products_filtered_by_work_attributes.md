@@ -1,4 +1,4 @@
-# Description
+# Select products filtered by work attributes
 
 Filter products by their work attributes
 
@@ -6,8 +6,8 @@ Filter products by their work attributes
 
 Products are retrieved and filtered by their work attributes. In this example only print products are retrieved with a title that contains the search criteria "phys".
 
-```gql
-{
+```
+query GetPrintProductsByTitle {
   products(
     productSearch: { onix21ProductFormCodeIn: [BB, BC] }
     workSearch: { titleCont: "phys" }
