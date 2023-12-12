@@ -1,3 +1,7 @@
+---
+description: Select basic contact details for a person.
+---
+
 # Select person contact details
 
 ## Explanation
