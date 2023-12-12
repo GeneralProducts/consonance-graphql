@@ -1,4 +1,4 @@
-# Description
+# Sample production request form
 
 Generate a production request form for a particular product using Google Docs
 
@@ -10,7 +10,7 @@ Create a new document in Google Docs and navigate to **Tools > Script Editor**
 
 From the Script Editor screen select the plus icon next to **Files** and create a new HTML file. The code below will generate interactive sidebar that can be accessed from the main navigation of your document with a form that will allow you to populate a production request form by inputting an ISBN. It can be customised as with a typical HTML document using CSS. We have included some basic font styles, but these can be changed to suit your preferences.
 
-```gql
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -65,15 +65,15 @@ From the Script Editor screen select the plus icon next to **Files** and create 
 </html>
 ```
 
-Still on the Script Editor screen, select Code.gs from the file section. Paste the code below, which will be your main script. Replace YOUR_API_KEY with the API key supplied by Consonance support and choose an ISBN to use as a default. You will be able to enter any ISBN using the sidebar form, but the script will need a default value to use first.
+Still on the Script Editor screen, select Code.gs from the file section. Paste the code below, which will be your main script. Replace YOUR\_API\_KEY with the API key supplied by Consonance support and choose an ISBN to use as a default. You will be able to enter any ISBN using the sidebar form, but the script will need a default value to use first.
 
 Return to your main Google Doc and there should now be a **Consonance** option in your main navigation bar. You can select this to open the sidebar and populate the form.
 
-You can style your form to your requirements. To add data to your sheet you need to include keyword text that the script can find and replace with the values retrieved from Consonance. If you wanted to include the product's ISBN, you would need to include **ISBN13_** where you would like it to appear and once the script runs it would replace this with your title, retaining any styling or formatting you have applied. Some examples are included here, but you can add and remove fields by referring to the GraphQL schema and following the structure in the script for the existing fields.
+You can style your form to your requirements. To add data to your sheet you need to include keyword text that the script can find and replace with the values retrieved from Consonance. If you wanted to include the product's ISBN, you would need to include **ISBN13\_** where you would like it to appear and once the script runs it would replace this with your title, retaining any styling or formatting you have applied. Some examples are included here, but you can add and remove fields by referring to the GraphQL schema and following the structure in the script for the existing fields.
 
 You will need to undo the document back to its templated values each time the script is run. If you run the script with the form already populated it will not work correctly.
 
-```gql
+```
 function onOpen() {
   DocumentApp.getUi()
     .createMenu('Consonance')
@@ -277,13 +277,12 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
 
 
 
-
 ```
 
 Here is an example of how your Google doc might look before the script runs.
 
-![Google Docs screenshot. The document has the heading Consonance Production Request Form and has many fields that are unpopulated.](/images/sampleprodreqformbefore.png)
+![Google Docs screenshot. The document has the heading Consonance Production Request Form and has many fields that are unpopulated.](../images/sampleprodreqformbefore.png)
 
 This is how it might look after choosing the 'Find' button.
 
-![Google Docs screenshot. The previously unpopulated fields now have relevant information retrieved from Consonance.](/images/sampleprodreqformafter.png)
+![Google Docs screenshot. The previously unpopulated fields now have relevant information retrieved from Consonance.](../images/sampleprodreqformafter.png)

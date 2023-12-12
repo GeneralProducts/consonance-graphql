@@ -1,8 +1,8 @@
 ---
-description: Select basic identifying contact details for a person.
+description: Select basic identifying details for a person.
 ---
 
-# Select basic contact details
+# Select basic person details
 
 ## Explanation
 

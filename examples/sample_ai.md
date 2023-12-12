@@ -1,4 +1,4 @@
-# Description
+# Sample AI/Tip Sheet
 
 Generate an AI sheet from a particular work
 
@@ -10,7 +10,7 @@ Create a new document in Google Docs and navigate to **Tools > Script Editor**
 
 From the Script Editor screen select the plus icon next to **Files** and create a new HTML file. The code below will generate interactive sidebar that can be accessed from the main navigation of your document with a form that will allow you to populate a new AI sheet by inputting an ISBN. It can be customised as with a typical HTML document using CSS.
 
-```gql
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -65,15 +65,15 @@ From the Script Editor screen select the plus icon next to **Files** and create 
 </html>
 ```
 
-Still on the Script Editor screen, select Code.gs from the file section. Paste the code below, which will be your main script. Replace YOUR_API_KEY with the API key supplied by Consonance support and choose an ISBN to use as a default. You will be able to enter any ISBN using the sidebar form, but the script will need a default value to use first.
+Still on the Script Editor screen, select Code.gs from the file section. Paste the code below, which will be your main script. Replace YOUR\_API\_KEY with the API key supplied by Consonance support and choose an ISBN to use as a default. You will be able to enter any ISBN using the sidebar form, but the script will need a default value to use first.
 
 Return to your main Google Doc and there should now be a **Consonance** option in your main navigation bar. You can select this to open the sidebar and populate the form.
 
-You can style your AI sheet to your requirements. To add data to your sheet you need to include keyword text that the script can find and replace with the values retrieved from Consonance. If you wanted to include the product's title, you would need to include **Title_** where you would like it to appear and once the script runs it would replace this with your title, retaining any styling or formatting you have applied. Some examples are included here, but you can add and remove fields by referring to the GraphQL schema and following the structure in the script for the existing fields.
+You can style your AI sheet to your requirements. To add data to your sheet you need to include keyword text that the script can find and replace with the values retrieved from Consonance. If you wanted to include the product's title, you would need to include **Title\_** where you would like it to appear and once the script runs it would replace this with your title, retaining any styling or formatting you have applied. Some examples are included here, but you can add and remove fields by referring to the GraphQL schema and following the structure in the script for the existing fields.
 
 You can use this to generate a new AI sheet from any product but you will need to undo the document back to its templated values for each one. If you run the script with the AI sheet already populated it will not work correctly.
 
-```gql
+```
 function onOpen() {
   DocumentApp.getUi()
     .createMenu('Consonance')
@@ -223,8 +223,8 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
 
 Here is an example of how your AI could look before it is populated.
 
-![Google Docs screenshot showing an AI sheet containing templated text.](/images/sampleAI.png)
+![Google Docs screenshot showing an AI sheet containing templated text.](../images/sampleAI.png)
 
 This is how your AI could look once you have run the script.
 
-[An AI Sheet populated using GraphQL](/images/sampleAI.pdf)
+[An AI Sheet populated using GraphQL](../images/sampleAI.pdf)
