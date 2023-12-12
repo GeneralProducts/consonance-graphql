@@ -16,6 +16,7 @@
   * [Select person contact details](people/select-person-contact-details.md)
   * [Select professional details](people/select-professional-details.md)
   * [Select person details and contributing works](people/select-person-details-and-contributing-works.md)
+  * [Select organisation details](people/select-organisation-details.md)
 * [Data exchange](use-headings-to-create-page-groups-like-this-one/data-exchange/README.md)
   * [Sample custom report sheet](examples/sample\_custom\_report.md)
   * [Sample dashboard](examples/sample\_dashboard.md)
