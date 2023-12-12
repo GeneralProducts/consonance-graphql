@@ -11,6 +11,8 @@
 * [Production](use-headings-to-create-page-groups-like-this-one/production/README.md)
   * [Select works and their product production run details](examples/works\_and\_product\_production\_run\_details.md)
   * [Sample production request form](examples/sample\_production\_request\_form.md)
+* [People](people/README.md)
+  * [Select basic contact details](people/select-basic-contact-details.md)
 * [Data exchange](use-headings-to-create-page-groups-like-this-one/data-exchange/README.md)
   * [Sample custom report sheet](examples/sample\_custom\_report.md)
   * [Sample dashboard](examples/sample\_dashboard.md)

@@ -1,4 +1,4 @@
-# Description
+# Select works and their product production run details
 
 Select works and production run information for their products
 
@@ -6,7 +6,7 @@ Select works and production run information for their products
 
 Product IDs are retrieved for a single work along with their relevant production run information.
 
-```gql
+```
 query WorkType {
   work(workSearch: {idEq: YOUR_WORK_ID}) {
     id
