@@ -14,6 +14,7 @@
 * [People](people/README.md)
   * [Select basic person details](people/select-basic-contact-details.md)
   * [Select person contact details](people/select-person-contact-details.md)
+  * [Select professional details](people/select-professional-details.md)
 * [Data exchange](use-headings-to-create-page-groups-like-this-one/data-exchange/README.md)
   * [Sample custom report sheet](examples/sample\_custom\_report.md)
   * [Sample dashboard](examples/sample\_dashboard.md)
