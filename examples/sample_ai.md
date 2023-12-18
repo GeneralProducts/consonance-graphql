@@ -6,9 +6,12 @@ Generate an AI sheet from a particular work
 
 Using a combination of GraphQL and Javascript in Google Docs and Apps Script you can populate fields for an AI or tip sheet using Product level fields.
 
-Create a new document in Google Docs and navigate to **Tools > Script Editor**
+**Setting Up the Sidebar in Google Docs:**
 
-From the Script Editor screen select the plus icon next to **Files** and create a new HTML file. The code below will generate interactive sidebar that can be accessed from the main navigation of your document with a form that will allow you to populate a new AI sheet by inputting an ISBN. It can be customised as with a typical HTML document using CSS.
+* Open a new Google Docs document.
+* Navigate to `Extensions > Apps Script`.
+* In the Apps Script Editor, click the plus icon (+) next to "Files" to create a new HTML file named 'sidebar'.
+* Use the provided HTML code to create an interactive sidebar. This sidebar, accessible from the main navigation of your document, includes a form for inputting an ISBN, URL, and API key. The sidebar can be customised with CSS.
 
 ```
 <!DOCTYPE html>
@@ -65,16 +68,13 @@ From the Script Editor screen select the plus icon next to **Files** and create 
 </html>
 ```
 
-Still on the Script Editor screen, select Code.gs from the file section. Paste the code below, which will be your main script. Replace YOUR\_API\_KEY with the API key supplied by Consonance support and choose an ISBN to use as a default. You will be able to enter any ISBN using the sidebar form, but the script will need a default value to use first.
+**Creating the Main Script:**
 
-Return to your main Google Doc and there should now be a **Consonance** option in your main navigation bar. You can select this to open the sidebar and populate the form.
-
-You can style your AI sheet to your requirements. To add data to your sheet you need to include keyword text that the script can find and replace with the values retrieved from Consonance. If you wanted to include the product's title, you would need to include **Title\_** where you would like it to appear and once the script runs it would replace this with your title, retaining any styling or formatting you have applied. Some examples are included here, but you can add and remove fields by referring to the GraphQL schema and following the structure in the script for the existing fields.
-
-You can use this to generate a new AI sheet from any product but you will need to undo the document back to its templated values for each one. If you run the script with the AI sheet already populated it will not work correctly.
+* In the Script Editor, select `Code.gs` from the file section.
+* Copy and paste the provided JavaScript code into this file. This code includes functions for opening the sidebar, sending GraphQL queries, and populating your Google Doc with the fetched data.
+* Replace placeholders like `YOUR_API_KEY` with actual values provided by Consonance support.
 
 ```
-function onOpen() {
   DocumentApp.getUi()
     .createMenu('Consonance')
     .addItem('Show sidebar', 'showSidebar')
@@ -220,6 +220,22 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
   insertImage(doc, product.work.supportingResources[0]?.url);
 }
 ```
+
+**Using the Sidebar:**
+
+* Back in your Google Docs document, a new menu item "Consonance" should appear.
+* Click on it and select "Show sidebar" to open the newly created sidebar.
+* Enter the required information (URL, API Key, ISBN) and click "Find" to populate the AI sheet.
+
+**Customising Your AI Sheet:**
+
+* In your Google Doc, use specific keywords as placeholders (e.g., `Title_`) where you want product information to appear.
+* The script will replace these placeholders with actual product data, retaining any formatting or styling.
+* Refer to the GraphQL schema to add or remove fields as needed.
+
+**Resetting the Document:**
+
+* To generate a new AI sheet for a different product, reset the document to its template form before running the script again. Failure to do so may result in incorrect or incomplete data population.
 
 Here is an example of how your AI could look before it is populated.
 
