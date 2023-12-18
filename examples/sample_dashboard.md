@@ -1,20 +1,38 @@
 # Sample dashboard
 
-Populate a dashboard of charts and graphs using Google Looker Studio
+Populate a dashboard of charts and graphs using Google Looker Studio (formerly Google Data Studio)
 
 ## Explanation
 
 Using Google Sheets and Google Looker Studio you can populate charts and graphs to create a dashboard of your data.
 
-First, you'll need to build a [custom report](sample\_custom\_report.md) that contains all of the fields you need and run this custom report at least once.
+**Prepare Your Data in Google Sheets:**
 
-Create a new report on [Google Looker Studio](https://lookerstudio.google.com) and select **Google Sheets** from the selection of Google Connectors.
+* Start by building a [custom report](sample\_custom\_report.md)  in Google Sheets. Include all the fields you need for your dashboard.
+* Run this report at least once to ensure your data is up-to-date.
 
-Link your previously created custom report created in Google Sheets as a data source by selecting the spreadsheet. There will be a pop-up warning you that you are about to add data to your report; choose **Add to Report** to continue.
+**Set Up Your Report in Looker Studio:**
 
-Use the options in the main navigation or sidebar to add a chart using the fields from your custom report.
+* Open Looker Studio and create a new report.
+* Choose Google Sheets as your data source from the available Google Connectors.
 
-Refresh the data in your report with choosing **View > Refresh Data** from the main navigation bar, or with the keyboard shortcut **Ctrl+Shift+E**
+**Connect Your Custom Report:**
+
+* Link the custom report you created in Google Sheets as your data source.
+* Select the appropriate spreadsheet from your Google Sheets.
+* When prompted with a warning about adding data to your report, select `Add to Report` to proceed.
+
+**Add Charts to Your Dashboard:**
+
+* Utilise the options in the main navigation or sidebar in Looker Studio to add charts.
+* Use the fields from your custom report in Google Sheets to populate these charts.
+
+**Refresh Your Data:**
+
+* To update the data in your dashboard, go to `View > Refresh Data` in the main navigation bar.
+* Alternatively, you can use the keyboard shortcut `Ctrl+Shift+E` to refresh the data.
+
+Regularly refreshing your data ensures your dashboard reflects the most current information. Experiment with different chart types in Looker Studio to best represent your data.
 
 ### Examples
 

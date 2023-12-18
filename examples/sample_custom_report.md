@@ -1,4 +1,4 @@
-# Description
+# Sample custom report sheet
 
 Generate a report in Google Sheets with customisable columns
 
@@ -6,15 +6,13 @@ Generate a report in Google Sheets with customisable columns
 
 Using a combination of GraphQL and Javascript in Google Sheets and Apps Script you can generate a custom report with your choice of column headings.
 
-Create a new sheet in [Google Sheets](https://sheets.google.com/) and navigate to **Extensions > Apps Script** from the main navigation bar to open the Apps Script editor.
+**Set Up your Report in Google Sheets:**
 
-Paste the code below into this screen, replacing any existing text. Add your API key.
-
-This script will generate a report of every field currently available in Consonance's GraphQL schema. If you would like to edit or delete any columns to produce a smaller report you can refer to the inline notes for help doing that.
-
-Choose *Run* from the main navigation bar to generate your report. You may be prompted to authorize your script by signing into your Google account and choosing *allow*. This grants permission for the script to run.
-
-Go back to your sheet and this should now be populated with the columns of data you've specified.
+* Open a new spreadsheet in Google Sheets.
+* Navigate to `Extensions > Apps Script` from the main menu to access the Apps Script editor.
+* In the Apps Script editor, paste the script provided below into a new or existing file, replacing any existing text.
+* Update the script with your API key from Consonance.
+* This script is designed to fetch and display every field available in Consonance's GraphQL schema in your Google Sheet. You can rearrange, rename, or delete fields as needed to tailor the report to your requirements and refer to the inline notes in the script for help doing that
 
 ```gql
  // Replace the text YOUR_API_KEY below with the API key provided to you by Consonance support.
@@ -432,6 +430,12 @@ function getFieldData(fieldType, product = null) {
 }
 ```
 
+**Running the Script:**
+
+* Back in Google Sheets, select `Run` from the main menu to execute the script.
+* You may be prompted to authorise the script. Sign in to your Google account and grant the necessary permissions to allow the script to interact with your sheet.
+* Once authorised and run, the script will populate your sheet with the specified data fields.
+
 Here is an example of how your report could look.
 
-![Google Sheets screenshot showing a populated spreadsheet with metadata retrieved from Consonance.](/images/samplecustomreport.png)
+![Google Sheets screenshot showing a populated spreadsheet with metadata retrieved from Consonance.](../images/samplecustomreport.png)

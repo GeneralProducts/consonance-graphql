@@ -6,9 +6,12 @@ Generate a production request form for a particular product using Google Docs
 
 Using a combination of GraphQL and Javascript in Google Docs and Apps Script you can populate fields for a production request form using fields that retrieve Work and Product level information. Note that some of these fields will require a production run to exist in Consonance in order to populate.
 
-Create a new document in Google Docs and navigate to **Tools > Script Editor**
+**Setting Up the Sidebar in Google Docs:**
 
-From the Script Editor screen select the plus icon next to **Files** and create a new HTML file. The code below will generate interactive sidebar that can be accessed from the main navigation of your document with a form that will allow you to populate a production request form by inputting an ISBN. It can be customised as with a typical HTML document using CSS. We have included some basic font styles, but these can be changed to suit your preferences.
+* Open a new Google Docs document.
+* Navigate to `Extensions > Apps Script`.
+* In the Apps Script Editor, click the plus icon (+) next to "Files" to create a new HTML file named 'sidebar'.
+* Use the provided HTML code to create an interactive sidebar. This sidebar, accessible from the main navigation of your document, includes a form for inputting an ISBN, URL, and API key. The sidebar can be customised with CSS.
 
 ```
 <!DOCTYPE html>
@@ -65,13 +68,11 @@ From the Script Editor screen select the plus icon next to **Files** and create 
 </html>
 ```
 
-Still on the Script Editor screen, select Code.gs from the file section. Paste the code below, which will be your main script. Replace YOUR\_API\_KEY with the API key supplied by Consonance support and choose an ISBN to use as a default. You will be able to enter any ISBN using the sidebar form, but the script will need a default value to use first.
+**Creating the Main Script:**
 
-Return to your main Google Doc and there should now be a **Consonance** option in your main navigation bar. You can select this to open the sidebar and populate the form.
-
-You can style your form to your requirements. To add data to your sheet you need to include keyword text that the script can find and replace with the values retrieved from Consonance. If you wanted to include the product's ISBN, you would need to include **ISBN13\_** where you would like it to appear and once the script runs it would replace this with your title, retaining any styling or formatting you have applied. Some examples are included here, but you can add and remove fields by referring to the GraphQL schema and following the structure in the script for the existing fields.
-
-You will need to undo the document back to its templated values each time the script is run. If you run the script with the form already populated it will not work correctly.
+* In the Script Editor, select `Code.gs` from the file section.
+* Copy and paste the provided JavaScript code into this file. This code includes functions for opening the sidebar, sending GraphQL queries, and populating your Google Doc with the fetched data.
+* Replace placeholders like `YOUR_API_KEY` with actual values provided by Consonance support.
 
 ```
 function onOpen() {
@@ -278,6 +279,12 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
 
 
 ```
+
+**Using Your Custom Production Request Form:**
+
+* Back in your Google Docs document, a new menu item "Consonance" will appear in the main navigation bar.
+* Click on it and select the option to open the sidebar.
+* Fill out the form in the sidebar with the required information (URL, API Key, ISBN) and click "Find" to auto-populate the production request form.
 
 Here is an example of how your Google doc might look before the script runs.
 
