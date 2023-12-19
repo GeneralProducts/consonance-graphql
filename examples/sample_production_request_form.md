@@ -251,29 +251,29 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
   body.replaceText("^.*ISBN13_*$", product.isbn.isbnWithDashes || "-");
   body.replaceText("^.*PUBDATE_*$", product.publicationDateString || "-");
   body.replaceText("^.*PUBDATE_*$", product.publicationDateString || "-");
-  body.replaceText("^.*JOBNO_*$", product.work[0]?.productionRuns[0]?.id || "-");
-  body.replaceText("^.*IMPRINTNAME_*$", product.work[0]?.imprint.name || "-");
+  body.replaceText("^.*JOBNO_*$", product.work.productionRuns[0]?.id || "-");
+  body.replaceText("^.*IMPRINTNAME_*$", product.work.imprint.name || "-");
   body.replaceText("^.*GBPRRP_*$", product.gbp_consumer_price[0]?.amount || "-");
   body.replaceText("^.*FORMATTYPE_*$", product.onix21ProductForm.description || "-");
-  body.replaceText("^.*TRIMSIZE_*$", product.work[0]?.productionRuns[0]?.bindings[0]?.trimmingMethod || "-");
-  body.replaceText("^.*BINDINGTYPE_*$", product.work[0]?.productionRuns[0]?.bindings[0]?.description || "-");
+  body.replaceText("^.*TRIMSIZE_*$", product.work.productionRuns[0]?.bindings[0]?.trimmingMethod || "-");
+  body.replaceText("^.*BINDINGTYPE_*$", product.work.productionRuns[0]?.bindings[0]?.description || "-");
   body.replaceText("^.*PAGEEXTENT_*", product.productionPageCount || "-");
   body.replaceText("^.*PLATEEXT_*", product.totalUnnumberedInsertPageCount || "-");
-  body.replaceText("^.*PLATEPOS_*", product.work[0]?.productionRuns[0]?.bindings[0]?.endpapers || "-");
-  body.replaceText("^.*SPINEWIDTH_*", product.work[0]?.productionRuns[0]?.bindings[0]?.caseSpineStyle || "-");
-  body.replaceText("^.*BOARDWIDTH_*", product.work[0]?.productionRuns[0]?.bindings[0]?.widthOfBoard || "-");
-  body.replaceText("^.*TEXTCOL_*", product.work[0]?.productionRuns[0]?.interiors[0]?.textColour || "-");
-  body.replaceText("^.*SECTCOL_*", product.work[0]?.productionRuns[0]?.interiors[0]?.textColourDescription || "-");
-  body.replaceText("^.*SECTCOVER_*", product.work[0]?.productionRuns[0]?.covers[0]?.coverType || "-");
-  body.replaceText("^.*PRINTFINISH_*", product.work[0]?.productionRuns[0]?.finishes[0]?.description || "-");
-  body.replaceText("^.*TEXTPAPER_*", product.work[0]?.productionRuns[0]?.interiors[0]?.paper || "-");
-  body.replaceText("^.*SECTPAPER_*", product.work[0]?.productionRuns[0]?.interiors[0]?.paper || "-");
-  body.replaceText("^.*JACKETMAT_*", product.work[0]?.productionRuns[0]?.covers[0]?.paper || "-");
-  body.replaceText("^.*CLOTHCOL_*", product.work[0]?.productionRuns[0]?.covers[0]?.coverColoursOutside || "-");
-  body.replaceText("^.*ENDPAPERMAT_*", product.work[0]?.productionRuns[0]?.bindings[0]?.endpapers || "-");
-  body.replaceText("^.*MATEXTRAS_*", product.work[0]?.productionRuns[0]?.embellishments[0]?.description || "-");
+  body.replaceText("^.*PLATEPOS_*", product.work.productionRuns[0]?.bindings[0]?.endpapers || "-");
+  body.replaceText("^.*SPINEWIDTH_*", product.work.productionRuns[0]?.bindings[0]?.caseSpineStyle || "-");
+  body.replaceText("^.*BOARDWIDTH_*", product.work.productionRuns[0]?.bindings[0]?.widthOfBoard || "-");
+  body.replaceText("^.*TEXTCOL_*", product.work.productionRuns[0]?.interiors[0]?.textColour || "-");
+  body.replaceText("^.*SECTCOL_*", product.work.productionRuns[0]?.interiors[0]?.textColourDescription || "-");
+  body.replaceText("^.*SECTCOVER_*", product.work.productionRuns[0]?.covers[0]?.coverType || "-");
+  body.replaceText("^.*PRINTFINISH_*", product.work.productionRuns[0]?.finishes[0]?.description || "-");
+  body.replaceText("^.*TEXTPAPER_*", product.work.productionRuns[0]?.interiors[0]?.paper || "-");
+  body.replaceText("^.*SECTPAPER_*", product.work.productionRuns[0]?.interiors[0]?.paper || "-");
+  body.replaceText("^.*JACKETMAT_*", product.work.productionRuns[0]?.covers[0]?.paper || "-");
+  body.replaceText("^.*CLOTHCOL_*", product.work.productionRuns[0]?.covers[0]?.coverColoursOutside || "-");
+  body.replaceText("^.*ENDPAPERMAT_*", product.work.productionRuns[0]?.bindings[0]?.endpapers || "-");
+  body.replaceText("^.*MATEXTRAS_*", product.work.productionRuns[0]?.embellishments[0]?.description || "-");
   body.replaceText("^.*EXPDELIVERY_*", product.plannedPublicationDate || "-");
-  body.replaceText("^.*DELQUANTITY_*", product.work[0]?.productionRuns[0]?.quantities[0]?.receivedQuantity || "-");
+  body.replaceText("^.*DELQUANTITY_*", product.work.productionRuns[0]?.quantities[0]?.receivedQuantity || "-");
 }
 
 
