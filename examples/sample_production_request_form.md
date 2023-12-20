@@ -10,8 +10,8 @@ Using a combination of GraphQL and Javascript in Google Docs and Apps Script you
 
 * Open a new Google Docs document.
 * Navigate to `Extensions > Apps Script`.
-* In the Apps Script Editor, click the plus icon (+) next to "Files" to create a new HTML file named 'sidebar'.
-* Use the provided HTML code to create an interactive sidebar. This sidebar, accessible from the main navigation of your document, includes a form for inputting an ISBN, URL, and API key. The sidebar can be customised with CSS.
+* In the Apps Script Editor, click the plus icon (+) next to "Files" and create a new HTML file named 'sidebar'.
+* Copy and paste the HTML code below to create an interactive sidebar, replacing any placeholder text that already exists in the new file. This sidebar, accessible from the main navigation of your document, includes a form for inputting an ISBN, URL, and API key. The sidebar can be customised with CSS.
 
 ```
 <!DOCTYPE html>
@@ -70,9 +70,9 @@ Using a combination of GraphQL and Javascript in Google Docs and Apps Script you
 
 **Creating the Main Script:**
 
-* In the Script Editor, select `Code.gs` from the file section.
-* Copy and paste the provided JavaScript code into this file. This code includes functions for opening the sidebar, sending GraphQL queries, and populating your Google Doc with the fetched data.
-* Replace placeholders like `YOUR_API_KEY` with actual values provided by Consonance support.
+* In the Script Editor, select `Code.gs` from the file section. Google might have called it something else, but there will only be one file with the .gs extension, so that's the one to select.
+* Copy and paste the JavaScript code below into this file. This code includes functions for opening the sidebar, sending GraphQL queries, and populating your Google Doc with the fetched data.
+* Optionally, replace placeholders like `YOUR_API_KEY` with actual values provided by Consonance support.
 
 ```
 function onOpen() {
@@ -280,6 +280,20 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
 
 ```
 
+Save the file. The top of the page should look like this, with onOpen selected:&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-12-20 at 18.12.53.png" alt=""><figcaption></figcaption></figure>
+
+**Creating a template:**
+
+Type and format words as you'd usually do into the doc (not the script).  The words that can be swapped out using the example we've given here are the ones in red in this screenshot:&#x20;
+
+e.g. type IMPRINTNAME\_ into your doc to have it replaced with the imprint's name.
+
+You can edit the script if you prefer different names, and add other queries.&#x20;
+
+![](<../.gitbook/assets/Screenshot 2023-12-20 at 18.18.11.png>)
+
 **Using Your Custom Production Request Form:**
 
 * Back in your Google Docs document, a new menu item "Consonance" will appear in the main navigation bar.
@@ -293,3 +307,13 @@ Here is an example of how your Google doc might look before the script runs.
 This is how it might look after choosing the 'Find' button.
 
 ![Google Docs screenshot. The previously unpopulated fields now have relevant information retrieved from Consonance.](../images/sampleprodreqformafter.png)
+
+**Troubleshooting**
+
+If you are signed in to more than one Google account, this can apparently mess things up, so try signing out of all but one account if the Find button doesn't change anything.
+
+You'll probably be prompted to authenticate: click OK on dialogue boxes that prompt you.&#x20;
+
+Raise a support ticket to get your API key at support@consonance.app.&#x20;
+
+Raise a ticket if you'd like us to share a starter template with you.&#x20;
