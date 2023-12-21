@@ -74,9 +74,9 @@ Using a combination of GraphQL and Javascript in Google Docs and Apps Script you
 * Copy and paste the provided JavaScript code into this file. This code includes functions for opening the sidebar, sending GraphQL queries, and populating your Google Doc with the fetched data.
 * Replace placeholders like `YOUR_API_KEY` with actual values provided by Consonance support.
 
-```
-  DocumentApp.getUi()
-    .createMenu('Consonance')
+<pre><code>function onOpen() {
+<strong>    DocumentApp.getUi()
+</strong>    .createMenu('Consonance')
     .addItem('Show sidebar', 'showSidebar')
     .addToUi();
 }
@@ -203,7 +203,6 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
   body.replaceText("^.*pubDate_*$", product.publicationDate || "-");
   body.replaceText("^.*Subtitle_*$", product.subtitle || "");
   body.replaceText("^.*ISBN13_*$", product.isbn.isbnWithDashes || "-");
-  body.replaceText("^.*FORMAT_*$", product.inHouseEdition.name || "-");
   body.replaceText("^.*editionNumber_*$", product.work.editionNumber || "-");
   body.replaceText("^.*priceGBP_*$", product.gbp_consumer_price[0]?.amount || "-");
   body.replaceText("^.*pageCount_*", product.approximatePageCount || "-");
@@ -219,7 +218,7 @@ const main = (form = {isbn13:"YOUR_ISBN", key:"YOUR_API_KEY", url:"https://web.c
   body.replaceText("^.*seriesName_*$", product.work.seriesMemberships[0]?.series?.name || "-");
   insertImage(doc, product.work.supportingResources[0]?.url);
 }
-```
+</code></pre>
 
 **Using the Sidebar:**
 
