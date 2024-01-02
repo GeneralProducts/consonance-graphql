@@ -10,7 +10,7 @@ Contract IDs are retrieved for a single contract along with delivery dates and l
 
 ```
 query GetContractDatesAndRights($contractId: Int!) {
-  contract(id: $contractId) {
+  contract(contractSearch: {idEq: $contractId}) {
     id
     msDeliveryDate
     revisedMsDeliveryDate
@@ -18,8 +18,9 @@ query GetContractDatesAndRights($contractId: Int!) {
     msProofsDate
     pubBeforeDate
     licensedRights {
-      right
-      territories
+      authorCut
+      id
+      rightType
     }
   }
 }
