@@ -10,7 +10,7 @@ Contract IDs are retrieved for a single contract along with relevant information
 
 ```
 query GetContractDetails($contractId: Int!) {
-  contract(id: $contractId) {
+  contract(contractSearch: {idEq: $contractId}) {
     id
     contractName
     description
@@ -25,12 +25,19 @@ query GetContractDetails($contractId: Int!) {
     terminatedDate
     terminationReason
     deliveryDates {
-      date
-      type
+      dateDue
+      deliverableType
+      deliveryRequirement
+      id
+      percentageOfTotal
+      slippedDate
     }
     gratisCopies {
-      quantity
-      reason
+      note
+      numberOfCopies
+      sendOn
+      sentOn
+      productId
     }
   }
 }
