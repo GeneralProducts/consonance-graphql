@@ -9,8 +9,8 @@ description: Select financial information included in contract details.
 Contract IDs are retrieved for a single contract along with financial information.
 
 ```
-query GetContractFinancials($contractId: Int!) {
-  contract(id: $contractId) {
+query GetContractFinancialDetails($contractId: Int!) {
+  contract(contractSearch: {idEq: $contractId}) {
     id
     flatFeeValue
     guaranteedRoyaltyValue
