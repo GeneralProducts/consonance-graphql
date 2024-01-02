@@ -7,7 +7,7 @@ Select works and their marketing material
 Products within a work are listed along with relevant marketing material such as description copy, prizes and subject classifications.
 
 ```
-query GetWorkDetailsById($workId: String!) {
+query GetWorkDetailsById($workId: Int!) {
   work(workSearch: {idEq: $workId}) {
     id
     identifyingDoi
