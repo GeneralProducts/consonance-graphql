@@ -15,29 +15,6 @@ query GetPersonDetails {
     name
     keyNames
     gender
-    addresses {
-      addressLine1
-      addressLine2
-      addressLine3
-      building
-      careOf
-      country {
-        description
-        value
-      }
-      departmentName
-      organisationName
-      postOfficeBox
-      postcode
-      subBuilding
-    }
-    emails {
-      email
-    }
-    phones {
-      phoneNumber
-      phoneType
-    }
     isni
     notes {
       noteText
