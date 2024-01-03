@@ -6,28 +6,43 @@ description: Select basic identifying details for a person.
 
 ## Explanation
 
-Person IDs are retrieved for a single contact along with their relevant identifying information.
+Relevant identifying information is retrieved for a single contact, filtered by their name.
 
 ```
-query GetPersonDetails($personId: Int!) {
-  person(id: $personId) {
+query GetPersonDetails {
+  contacts(contactSearch: {personNameCont: "Cate"}) {
     id
     name
-    biographicalNote
-    gender
-    titlesBeforeName
     keyNames
-    namesAfterKeyNames
-    personNameInverted
+    gender
+    addresses {
+      addressLine1
+      addressLine2
+      addressLine3
+      building
+      careOf
+      country {
+        description
+        value
+      }
+      departmentName
+      organisationName
+      postOfficeBox
+      postcode
+      subBuilding
+    }
+    emails {
+      email
+    }
+    phones {
+      phoneNumber
+      phoneType
+    }
+    isni
+    notes {
+      noteText
+    }
   }
 }
-
 ```
 
-Define your person contact ID variable:
-
-```
-{
-  "personId": YOUR_PERSON_ID_HERE
-}
-```
