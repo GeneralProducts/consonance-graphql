@@ -211,6 +211,7 @@ contributions {
             productWidthCm: productWidth(unit: CM)
             productHeightIn: productHeight(unit: IN)
             productWidthIn: productWidth(unit: IN)
+            productThicknessMm: productThickness(unit: MM)
             approximatePageCount
             productionPageCount
             mainContentPageCount
@@ -321,6 +322,7 @@ function getFieldData(fieldType, product = null) {
     ["productWidthMm",  product?.productWidthMm],
     ["productHeightCm",  product?.productHeightCm],
     ["productWidthCm",  product?.productWidthCm],
+    ["productThicknessMm",  product?.productThicknessMm],
     ["approximatePageCount",  product?.approximatePageCount],
     ["productionPageCount",  product?.productionPageCount],
     ["mainContentPageCount",  product?.mainContentPageCount],

@@ -117,6 +117,7 @@ function queryResponse(isbn, key, url) {
                 productWidthCm: productWidth(unit: CM)
                 productHeightIn: productHeight(unit: IN)
                 productWidthIn: productWidth(unit: IN)
+                productThickness: productThickness(unit: MM)
                 approximatePageCount
                 productionPageCount
                 mainContentPageCount
